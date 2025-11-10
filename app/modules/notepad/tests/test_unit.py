@@ -22,3 +22,7 @@ def test_sample_assertion(test_client):
     """
     greeting = "Hello, World!"
     assert greeting == "Hello, World!", "The greeting does not coincide with 'Hello, World!'"
+
+def test_notepad_index_page_loads(test_client):
+    response = test_client.get('/')
+    assert response.status_code == 200
